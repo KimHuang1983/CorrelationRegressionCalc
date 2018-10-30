@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="data">
+  </div>
+  <script>
+    var xmlhttp, xxx
+    xmlhttp = new XMLHttpRequest()
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        xxx = xmlhttp.responseText
+        document.getElementById('data').innerHTML = xxx
+      }
+    }
+    xmlhttp.open('GET', 'http://localhost:8000/TestData1.txt,TestData2.txt', true)
+    xmlhttp.send()
+  </script>
+</body>
+
+</html>

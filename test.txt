@@ -1,0 +1,1 @@
+Correlation Output: 0.9544965741   Regression Output: Y = -22.55160 + 1.72793 * X

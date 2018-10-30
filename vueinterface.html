@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <title>SE280 Assignment 2 VueInterface</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .jumbotron .h3, .jumbotron h3{
+          font-size: 4rem;
+      }
+      .jumbotron{
+          padding: 2rem 0;
+          background-color: #080808;
+          color: #EA9766;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="correlation">
+    <div class="jumbotron text-center">
+      <h1>Correlation Regression Calculator</h1>
+    </div>
+    <div class="container">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">Choose X Data File</th>
+            <th scope="col">Choose Y Data File</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-success">
+            <th scope="col">
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" aria-describedby="inputGroupFileAddon01" @change="onFileChange"
+                    id="x"></input>
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </th>
+            <th scope="col">
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" aria-describedby="inputGroupFileAddon01" @change="onFileChange"
+                    id="y"></input>
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </th>
+          </tr>
+          <tr class="table-light">
+            <th scope="col" class="text-center">
+              {{x}}
+            </th>
+            <th scope="col" class="text-center">
+              {{y}}
+            </th>
+          </tr>
+          <tr class="table-warning">
+            <th scope="col">
+              <button type="button" class="btn btn-outline-dark btn-block" @click="generateCorrelation">Calculate
+                Correlation</button>
+            </th>
+            <th scope="col" class="text-center">
+              {{correlationOutput}}
+            </th>
+          </tr>
+          <tr class="table-info">
+            <th scope="col">
+              <button type="button" class="btn btn-outline-dark btn-block" @click="generateRegression">Produce
+                Regression
+                Equation</button>
+            </th>
+            <th scope="col" class="text-center">
+              {{regressionOutput}}
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="correlation.js"></script>
+  <script src="regression.js"></script>
+  <script src="vue.js"></script>
+</body>
+
+</html>
