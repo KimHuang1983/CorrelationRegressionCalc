@@ -6,24 +6,33 @@ Original assignment requirements is attached. Filename: "SemTwo2018_BCPR280Assig
 
 As required, the javascript frameworks I have chosen to complete the assignment are: 
 
-# Vue React Node js 
+# For Vue and React (BootStrap 4 incoporated for better user interface)
 
-Files created order:
+Files created in order:
 
-correlation.js
-regression.js
-vueinterface.html
-vue.js
+correlation.js;
+regression.js;
+vueinterface.html;
+vue.js;
 
-reactinterface.html
+reactinterface.html;
 
+
+# For Node js
 # Pre-requisites : Node.js
-correlationNode.js
-regressionNode.js
-nodeReaderWriter.js
-nodeServer.js
-nodeServerOutput.js
 
-Using Jasmine for testing the code of Correlation and Regression 
+File created in order:
 
-Plus 3 TestData File: TestData1.txt, TestData2.txt, TestData3.txt
+correlationNode.js;
+regressionNode.js;
+
+nodeReaderWriter.js;
+
+nodeServer.js;
+nodeServerOutput.js;
+
+# Jasmine framework for testing
+Folder called "Jasmine" testing javascript code of Correlation and Regression 
+
+Plus 5 TestData Testing File: TestData_X.txt, TestData_Y.txt, TestData1.txt, TestData2.txt, TestData3.txt
+and 1 test.txt (output from running nodeReaderWriter.js
